@@ -43,7 +43,11 @@ public class NameMatchTest {
         assertTrue(anyParamReturnVoid.match("(Ljava/lang/String;)V"));
         assertFalse(anyParamReturnVoid.match("()J"));
     }
-
+    @Test
+    public void testToString() {
+    	NameMatch match = new NameMatch(SignatureUtil.createMethodSignature(null,"int"));
+    	assertTrue(match.toString().equals("regex(\\(.*\\)I)"));
+    }
     @Test
     public void testReturnValuePatternMatch() {
         NameMatch anyParamReturnVoid = new NameMatch(SignatureUtil.createMethodSignature("", null));

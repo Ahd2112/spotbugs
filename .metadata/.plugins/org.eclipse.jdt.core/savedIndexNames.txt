@@ -1,0 +1,1 @@
+INDEX VERSION 1.130+C:\Users\Snoot\spotbugs\.metadata\.plugins\org.eclipse.jdt.core
